@@ -250,6 +250,8 @@ export const SessionAllFields = [
     "seedRatioLimited", // boolean: true if seedRatioLimit is honored by default
     "start-added-torrents", // boolean: true means added torrents will be started right away
     "trash-original-torrent-files", // boolean: true means the .torrent file of added torrents will be deleted
+    "torrent-added-verify-mode",
+    "torrent-recheck-verify-mode",
     "units", // object: see below
     "utp-enabled", // boolean: true means allow utp
     "version", // string: long version string $version ($revision)

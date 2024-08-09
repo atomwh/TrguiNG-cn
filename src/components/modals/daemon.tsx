@@ -144,6 +144,16 @@ function DownloadPanel({ form, session }: { form: UseFormReturnType<FormValues>,
                 />
             </Grid.Col>
             <Grid.Col span={4}>MB</Grid.Col>
+            <Grid.Col>
+                <Checkbox
+                    label="在添加种子时使用快速校验模式"
+                    {...form.getInputProps("session.torrent-added-verify-mode", { type: "checkbox" })} />
+            </Grid.Col>
+            <Grid.Col>
+                <Checkbox
+                    label="在重新校验种子时使用快速校验模式"
+                    {...form.getInputProps("session.torrent-recheck-verify-mode", { type: "checkbox" })} />
+            </Grid.Col>
         </Grid>
     );
 }
