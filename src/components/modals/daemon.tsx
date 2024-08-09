@@ -144,6 +144,16 @@ function DownloadPanel({ form, session }: { form: UseFormReturnType<FormValues>,
                 />
             </Grid.Col>
             <Grid.Col span={4}>MB</Grid.Col>
+            <Grid.Col>
+                <Checkbox
+                    label="Use fast hash verify when torrent new added"
+                    {...form.getInputProps("session.torrent-added-verify-mode", { type: "checkbox" })} />
+            </Grid.Col>
+            <Grid.Col>
+                <Checkbox
+                    label="Ush fast hash verify when recheck torrent"
+                    {...form.getInputProps("session.torrent-recheck-verify-mode", { type: "checkbox" })} />
+            </Grid.Col>
         </Grid>
     );
 }
