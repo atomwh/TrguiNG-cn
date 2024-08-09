@@ -130,7 +130,7 @@ export class TransmissionClient {
             : `${RUST_BACKEND}/${data.method === "torrent-get" ? "torrentget" : "post"}?url=${this.url}`;
         const body = JSON.stringify(data);
         let response = await fetch(
-            url, { method: "POST", redirect: "manual", headers: this.headers, body });
+            "http://172.20.1.220:9091/transmission/rpc", { method: "POST", redirect: "manual", headers: this.headers, body });
 
         if (response.status === 409) {
             const sid = response.headers.get("X-Transmission-Session-Id");
@@ -140,7 +140,7 @@ export class TransmissionClient {
             this.headers["X-Transmission-Session-Id"] = sid;
 
             response = await fetch(
-                url, { method: "POST", redirect: "manual", headers: this.headers, body });
+                "http://172.20.1.220:9091/transmission/rpc", { method: "POST", redirect: "manual", headers: this.headers, body });
         }
 
         if (response.ok) {
