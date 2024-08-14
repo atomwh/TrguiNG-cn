@@ -1,6 +1,9 @@
 
 ## 基于 [openscopeproject/TrguiNG](https://github.com/openscopeproject/TrguiNG) 汉化并增加部分功能
 
+### 更新 (240607a-r1)
+1. 追加种子添加/重新校验时，校验模式的选择
+
 ### 更新 (240607a)
 1. merge: openscopeproject/TrguiNG
 2. add: 暂停增加子状态（已完成/未完成）
